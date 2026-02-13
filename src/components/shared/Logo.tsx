@@ -6,13 +6,13 @@ const Logo = () => {
     return (
         <Link href={"/"} className="flex items-center gap-1">
             <Image
-                alt="logo-Trust"
+                alt="logo-TrustCare"
                 src={"/Logo.jpg"}
                 width={50}
                 height={40}
             />
             <h2 className="text-xl font-bold">
-                Trust <span className="text-primary">Trust</span>{" "}
+                Trust<span className="text-primary">Care</span>{" "}
             </h2>
         </Link>
     );

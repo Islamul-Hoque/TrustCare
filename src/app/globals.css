@@ -7,23 +7,25 @@
 @plugin "daisyui/theme" {
     name: "light";
     default: true;
-    /* Brand */
-    --color-primary: oklch(65% 0.23 35);
-    --color-secondary: oklch(58% 0.18 30);
-    --color-accent: oklch(72% 0.20 55);
+    /* Brand / Primary colors for TrustCare */
+    --color-primary: oklch(65% 0.12 220);     /* calm blue for trust */
+    --color-secondary: oklch(60% 0.10 45);    /* gentle orange for action buttons */
+    --color-accent: oklch(75% 0.15 90);       /* soft green for highlights */
 
-    /* Base */
-    --color-base-100: oklch(100% 0 0);
-    --color-base-200: oklch(97% 0.01 95);
-    --color-base-300: oklch(92% 0.015 95);
+    /* Base / Backgrounds */
+    --color-base-100: oklch(100% 0 0);        /* white background */
+    --color-base-200: oklch(98% 0.01 0);      /* light gray */
+    --color-base-300: oklch(95% 0.02 0);      /* slightly darker gray */
 
-    /* Neutral */
-    --color-neutral: oklch(35% 0.01 260);
-    --color-neutral-content: oklch(96% 0 0);
+    /* Neutral / Text */
+    --color-neutral: oklch(30% 0 0);          /* dark text */
+    --color-neutral-content: oklch(100% 0 0); /* white text */
 
-    /* Feedback */
-    --color-success: oklch(70% 0.17 145);
-    --color-error: oklch(62% 0.24 28);
+    /* Feedback / Alerts */
+    --color-success: oklch(65% 0.20 120);     /* green for success */
+    --color-error: oklch(60% 0.25 20);        /* red for errors */
+    --color-warning: oklch(70% 0.20 50);      /* orange for warnings */
 }
 
 @custom-variant dark (&:where([data-theme=night], [data-theme=night] *));
+
