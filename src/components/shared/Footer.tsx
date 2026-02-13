@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import Logo from "./Logo";
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* About */}
         <div>
-          <h2 className="text-lg font-bold mb-3">Care.xyz</h2>
+         <Logo/>
           <p>
             Trusted caregiving for children, elderly, and sick family members.
             Easy, secure, and accessible booking.
