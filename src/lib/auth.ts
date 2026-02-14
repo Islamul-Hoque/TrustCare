@@ -47,7 +47,7 @@
 // };
 
 // lib/auth.ts
-import { AuthOptions } from "next-auth";
+
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
 import { collections, dbConnect } from "./db";
@@ -61,7 +61,7 @@ type DBUser = {
   password: string;
 };
 
-export const authOptions: AuthOptions = {
+export const authOptions = {
   session: {
     strategy: "jwt",
   },
@@ -76,7 +76,7 @@ export const authOptions: AuthOptions = {
         if (!credentials?.email || !credentials?.password) return null;
 
         const users = await dbConnect<DBUser>(collections.USERS);
-        const user = await users.findOne({ email: credentials.email });
+        const user = await users.findOne({ email: credentials.email }) as DBUser | null;
 
         if (!user) throw new Error("No user found");
 
@@ -98,7 +98,7 @@ export const authOptions: AuthOptions = {
     }),
   ],
   callbacks: {
-    async jwt({ token, user }) {
+    async jwt({ token, user }: any) {
       if (user) {
         token.id = (user as any).id;
         token.nid = (user as any).nid;
@@ -106,7 +106,7 @@ export const authOptions: AuthOptions = {
       }
       return token;
     },
-    async session({ session, token }) {
+    async session({ session, token }: any) {
       if (session.user) {
         (session.user as any).id = token.id;
         (session.user as any).nid = token.nid;

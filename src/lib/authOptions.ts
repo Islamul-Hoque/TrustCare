@@ -1,4 +1,3 @@
-import { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
 import { collections, dbConnect } from "./db";
@@ -27,7 +26,7 @@ interface AuthUser {
   role: string;
 }
 
-export const authOptions: NextAuthOptions = {
+export const authOptions = {
   session: { strategy: "jwt" },
   providers: [
     CredentialsProvider({

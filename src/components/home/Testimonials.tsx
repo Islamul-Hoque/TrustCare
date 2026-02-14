@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
@@ -36,8 +35,8 @@ const successMetrics = [
 
 const Testimonials: React.FC = () => {
     const { ref, inView } = useInView({
-        triggerOnce: true, // একবারই animate হবে
-        threshold: 0.2,    // 20% visible হলে trigger হবে
+        triggerOnce: true, 
+        threshold: 0.2,    
     });
 
     return (
@@ -73,7 +72,6 @@ const Testimonials: React.FC = () => {
                 </div>
 
                 {/* Success Metrics */}
-                {/* Success Metrics */}
                 <div ref={ref} className="text-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-10">
                         Our Impact in Numbers
@@ -82,7 +80,7 @@ const Testimonials: React.FC = () => {
                         {successMetrics.map((metric) => (
                             <div key={metric.id}>
                                 <h3 className="text-4xl font-bold text-pink-600 mb-2">
-                                    {inView ? <CountUp end={metric.number} duration={3} /> : 0}+
+                                    {inView ? <CountUp end={metric.number} duration={1} /> : 0}+
                                 </h3>
                                 <p className="text-gray-700 font-medium">{metric.label}</p>
                             </div>
@@ -96,5 +94,3 @@ const Testimonials: React.FC = () => {
 };
 
 export default Testimonials;
-
-

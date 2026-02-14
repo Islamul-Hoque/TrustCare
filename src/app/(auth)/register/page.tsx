@@ -1,19 +1,11 @@
-// import { RegisterForm } from "@/components/auth/RegisterForm";
-// import React from "react";
-
-// const RegisterPage = () => {
-//     return (
-//         <div>
-//             <RegisterForm></RegisterForm>
-//         </div>
-//     );
-// };
-
-// export default RegisterPage;
-
 // app/(public)/register/page.tsx
 import { RegisterForm } from "@/components/auth/RegisterForm";
+import { Suspense } from "react";
 
 export default function RegisterPage() {
-    return <RegisterForm />;
+    return (
+        <Suspense fallback={<div className="flex justify-center items-center min-h-screen">Loading...</div>}>
+            <RegisterForm />
+        </Suspense>
+    );
 }

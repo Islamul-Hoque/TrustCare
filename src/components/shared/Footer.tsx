@@ -60,7 +60,7 @@ const Footer = () => {
       </div>
 
       <div className="border-t border-base-300 text-center py-4 text-sm">
-        &copy; {new Date().getFullYear()} Care.xyz. All rights reserved.
+        &copy; {new Date().getFullYear()} TrustCare. All rights reserved.
       </div>
     </footer>
   );
