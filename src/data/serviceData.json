@@ -1,0 +1,221 @@
+[
+  {
+    "name": "Baby Care & Babysitting",
+    "description": "Compassionate babysitting and child care services for your little ones. Experienced babysitters ensure safety, comfort, and playful engagement.",
+    "image": "https://i.ibb.co/20vHfgb1/Trust-Care-Slider1.png",
+    "chargePerHour": 200,
+    "chargePerDay": 1500,
+    "category": "children",
+    "features": ["Trusted babysitters", "Flexible duration", "Safe environment"],
+    "availability": "Available 7 days a week, 8 AM - 10 PM",
+    "ageRange": "Infants to 12 years old",
+    "caregiverQualification": "Certified babysitters with minimum 2 years of experience",
+    "languagesSpoken": ["Bangla", "English"],
+    "rating": 4,
+    "reviewsCount": 120,
+    "faq": [
+      { "question": "Can I book hourly?", "answer": "Yes, hourly or daily booking available." },
+      { "question": "Are babysitters background checked?", "answer": "Yes, strict background checks are done." }
+    ],
+    "location": {
+      "region": "Dhaka",
+      "district": "Dhaka",
+      "city": "Dhaka",
+      "covered_area": ["Uttara", "Dhanmondi", "Mirpur", "Mohammadpur"],
+      "latitude": 23.8103,
+      "longitude": 90.4125,
+      "status": "active"
+    },
+    "isActive": true,
+    "createdAt": "2026-02-14T14:10:00Z",
+    "updatedAt": "2026-02-14T14:10:00Z"
+  },
+  {
+    "name": "Elderly Care & Support",
+    "description": "Trusted caretakers providing companionship and daily assistance for seniors.",
+    "image": "https://i.ibb.co/yryy77G/image.png",
+    "chargePerHour": 250,
+    "chargePerDay": 1800,
+    "category": "elderly",
+    "features": ["Companionship", "Daily assistance", "Reliable caretakers"],
+    "availability": "Available 6 days a week, 9 AM - 9 PM",
+    "caregiverQualification": "Experienced caretakers with elderly care training",
+    "languagesSpoken": ["Bangla", "English"],
+    "rating": 3,
+    "reviewsCount": 95,
+    "faq": [
+      { "question": "Do caretakers help with medicine?", "answer": "Yes, they assist with daily medication reminders." }
+    ],
+    "location": {
+      "region": "Dhaka",
+      "district": "Gazipur",
+      "city": "Gazipur",
+      "covered_area": ["Tongi", "Kaliakair", "Sreepur"],
+      "latitude": 23.9999,
+      "longitude": 90.4203,
+      "status": "active"
+    },
+    "isActive": true,
+    "createdAt": "2026-02-14T14:10:00Z",
+    "updatedAt": "2026-02-14T14:10:00Z"
+  },
+  {
+    "name": "Special Care for the Sick",
+    "description": "Dedicated home services for sick or recovering family members.",
+    "image": "https://i.ibb.co/FqhFwKbX/image.png",
+    "chargePerHour": 300,
+    "chargePerDay": 2000,
+    "category": "sick",
+    "features": ["Medical support", "Personalized recovery care", "Flexible booking"],
+    "availability": "Available 24/7",
+    "caregiverQualification": "Caretakers trained in basic medical support",
+    "languagesSpoken": ["Bangla", "English"],
+    "rating": 4,
+    "reviewsCount": 150,
+    "faq": [
+      { "question": "Do you provide night care?", "answer": "Yes, 24/7 service is available." }
+    ],
+    "location": {
+      "region": "Dhaka",
+      "district": "Narayanganj",
+      "city": "Narayanganj",
+      "covered_area": ["Fatullah", "Siddhirganj", "Rupganj"],
+      "latitude": 23.62,
+      "longitude": 90.5,
+      "status": "active"
+    },
+    "isActive": true,
+    "createdAt": "2026-02-14T14:10:00Z",
+    "updatedAt": "2026-02-14T14:10:00Z"
+  },
+  {
+    "name": "Child Education & Tutoring",
+    "description": "Professional tutors for children offering academic support and guidance.",
+    "image": "https://i.ibb.co/xyz123/education.png",
+    "chargePerHour": 150,
+    "chargePerDay": 1000,
+    "category": "education",
+    "features": ["Experienced tutors", "Flexible schedule", "Personalized learning"],
+    "availability": "Available 5 days a week, 4 PM - 9 PM",
+    "rating": 5,
+    "reviewsCount": 80,
+    "location": {
+      "region": "Dhaka",
+      "district": "Faridpur",
+      "city": "Faridpur",
+      "covered_area": ["Goalanda", "Boalmari", "Bhanga"],
+      "latitude": 23.6,
+      "longitude": 89.8333,
+      "status": "active"
+    },
+    "isActive": true
+  },
+  {
+    "name": "Post-Surgery Home Care",
+    "description": "Supportive care for patients recovering from surgery at home.",
+    "image": "https://i.ibb.co/xyz123/surgery.png",
+    "chargePerHour": 350,
+    "chargePerDay": 2200,
+    "category": "medical",
+    "features": ["Medical monitoring", "Personal assistance", "Flexible duration"],
+    "availability": "Available 24/7",
+    "rating": 4,
+    "reviewsCount": 60,
+    "location": {
+      "region": "Dhaka",
+      "district": "Manikganj",
+      "city": "Manikganj",
+      "covered_area": ["Saturia", "Shivalaya", "Ghior"],
+      "latitude": 23.8617,
+      "longitude": 89.9767,
+      "status": "active"
+    },
+    "isActive": true
+  },
+  {
+    "name": "Elderly Companionship",
+    "description": "Friendly companions for elderly people to reduce loneliness and provide support.",
+    "image": "https://i.ibb.co/xyz123/elderly.png",
+    "chargePerHour": 180,
+    "chargePerDay": 1200,
+    "category": "elderly",
+    "features": ["Companionship", "Daily activities", "Emotional support"],
+    "availability": "Available 7 days a week, 10 AM - 8 PM",
+    "rating": 3.4,
+    "reviewsCount": 70,
+    "location": {
+      "region": "Dhaka",
+      "district": "Munshiganj",
+      "city": "Munshiganj",
+      "covered_area": ["Sreenagar", "Lohajang", "Sirajdikhan"],
+      "latitude": 23.55,
+      "longitude": 90.5305,
+      "status": "active"
+    },
+    "isActive": true
+  },
+  {
+    "name": "Child Special Needs Care",
+    "description": "Specialized care for children with disabilities or special needs.",
+    "image": "https://i.ibb.co/xyz123/special.png",
+    "chargePerHour": 400,
+    "chargePerDay": 2500,
+    "category": "children",
+    "features": ["Specialized caretakers", "Therapy support", "Safe environment"],
+    "availability": "Available 6 days a week, 9 AM - 6 PM",
+    "rating": 4.7,
+    "reviewsCount": 50,
+    "location": {
+      "region": "Dhaka",
+      "district": "Tangail",
+      "city": "Tangail",
+      "covered_area": ["Delduar", "Ghatail", "Kalihati"],
+      "latitude": 24.25,
+      "longitude": 89.92,
+      "status": "active"
+    },
+    "isActive": true
+  },
+  {
+  "name": "Mental Health Support",
+  "description": "Licensed professionals providing mental health and wellness support. Compassionate counseling and therapy sessions to improve emotional well-being and overall life balance.",
+  "image": "https://i.ibb.co/xyz123/mental.png",
+  "chargePerHour": 500,
+  "chargePerDay": 3000,
+  "category": "mental",
+  "features": [
+    "Counseling sessions",
+    "Emotional support",
+    "Stress management",
+    "Personalized therapy plans"
+  ],
+  "availability": "Available 6 days a week, 10 AM - 8 PM",
+  "caregiverQualification": "Licensed psychologists and certified counselors",
+  "languagesSpoken": ["Bangla", "English"],
+  "rating": 4,
+  "reviewsCount": 85,
+  "faq": [
+    {
+      "question": "Do you provide online sessions?",
+      "answer": "Yes, both in-person and online sessions are available."
+    },
+    {
+      "question": "Is the service confidential?",
+      "answer": "Absolutely, all sessions are strictly confidential."
+    }
+  ],
+  "location": {
+    "region": "Chattogram",
+    "district": "Chattogram",
+    "city": "Chattogram",
+    "covered_area": ["Pahartali", "Kotwali", "Halishahar", "Panchlaish", "Agrabad", "Chandgaon"],
+    "latitude": 22.3569,
+    "longitude": 91.8123,
+    "status": "active",
+    "flowchart": "https://example.com/chattogram-flowchart.png"
+  },
+  "isActive": true,
+  "createdAt": "2026-02-14T14:15:00Z",
+  "updatedAt": "2026-02-14T14:15:00Z"
+}
+]

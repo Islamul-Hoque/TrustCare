@@ -59,3 +59,41 @@ src/
  │
  ├── types/
  │    ├── next-auth.d.ts
+
+
+
+
+project-root/
+ ├─ app/
+ │   ├─ services/
+ │   │   ├─ page.tsx                  → All Services Page
+ │   │   └─ _components/
+ │   │       ├─ ServiceCard.tsx       → Single service card
+ │   │       └─ ServiceList.tsx       → List wrapper for all services
+ │   │
+ │   ├─ service/
+ │   │   └─ [id]/
+ │   │       ├─ page.tsx              → Service Detail Page
+ │   │       └─ _components/
+ │   │           ├─ ServiceDetail.tsx → Detailed info section
+ │   │           └─ BookButton.tsx    → Book Service button
+ │   │
+ │   ├─ booking/
+ │   │   └─ [id]/
+ │   │       ├─ page.tsx              → Booking Page
+ │   │       └─ _components/
+ │   │           └─ BookingForm.tsx   → Form for booking
+ │   │
+ │   ├─ my-bookings/
+ │   │   ├─ page.tsx                  → My Bookings Page
+ │   │   └─ _components/
+ │   │       └─ BookingCard.tsx       → Each booking card
+ │   │
+ │   └─ api/
+ │       ├─ services/
+ │       │   └─ route.ts              → Services API
+ │       └─ bookings/
+ │           └─ route.ts              → Bookings API
+ │
+ ├─ public/
+ │   └─ locations.json                → Static location dataset

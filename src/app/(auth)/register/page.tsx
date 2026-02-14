@@ -1,4 +1,4 @@
-// app/(public)/register/page.tsx
+
 import { RegisterForm } from "@/components/auth/RegisterForm";
 import { Suspense } from "react";
 
