@@ -37,6 +37,7 @@ const bannerSlides = [
 const Banner: React.FC = () => {
   return (
     <div className="w-full h-[400px] md:h-[600px] relative">
+      
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -51,29 +52,34 @@ const Banner: React.FC = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className="h-full"
       >
+
         {bannerSlides.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="relative w-full h-[400px] md:h-[600px]">
+            <div className="relative h-[400px] md:h-[600px] w-full">
+              {/* Full-width image */}
               <Image
                 src={item.image}
                 alt={`TrustCare Banner ${index + 1}`}
                 fill
-                className="object-cover"
+                className="object-cover w-full"
                 priority={index === 0}
               />
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/40 flex items-center">
-                <div className="text-left px-6 md:px-16 max-w-xl">
-                  <h1 className="text-white text-2xl md:text-5xl font-bold mb-4 leading-snug">
-                    {item.title}
-                  </h1>
-                  <p className="text-white text-sm md:text-lg mb-6">
-                    {item.description}
-                  </p>
-                  <button className="bg-gradient-to-r from-pink-500 to-red-500 text-white px-8 py-3 rounded-lg font-semibold shadow-lg hover:from-red-600 hover:to-pink-600 transition transform hover:scale-105">
-  {item.btn}
-</button>
-
+              
+              {/* Overlay with full width */}
+              <div className="absolute inset-0 bg-black/40 w-full flex items-center">
+                {/* Text container constrained to max-w-7xl */}
+                <div className="w-full max-w-7xl mx-auto px-6 md:px-12">
+                  <div className="text-left">
+                    <h1 className="text-white text-2xl md:text-5xl font-bold mb-4 leading-snug">
+                      {item.title}
+                    </h1>
+                    <p className="text-white text-sm md:text-lg mb-6">
+                      {item.description}
+                    </p>
+                    <button className="bg-gradient-to-r from-pink-500 to-red-500 text-white px-8 py-3 rounded-lg font-semibold shadow-lg hover:from-red-600 hover:to-pink-600 transition transform hover:scale-105">
+                      {item.btn}
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,11 +1,14 @@
 import Link from "next/link";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import Logo from "./Logo";
+import Container from "./Container";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 text-base-content mt-16">
-      <div className="container mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-gray-100 text-base-content ">
+      <Container>
+        <div>
+      <div className=" px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* About */}
         <div>
          <Logo/>
@@ -62,6 +65,8 @@ const Footer = () => {
       <div className="border-t border-base-300 text-center py-4 text-sm">
         &copy; {new Date().getFullYear()} TrustCare. All rights reserved.
       </div>
+      </div>
+      </Container>
     </footer>
   );
 };

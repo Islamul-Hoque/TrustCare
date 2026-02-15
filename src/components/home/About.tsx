@@ -1,10 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import Container from "../shared/Container";
 
 const About: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-r from-gray-50 to-gray-100">
-      <div className="container mx-auto px-6 md:px-12 lg:px-20 grid md:grid-cols-2 gap-12 items-center">
+      <Container>
+      <div className=" mx-auto  grid md:grid-cols-2 gap-12 items-center">
         
         {/* Left side image */}
         <div className="relative w-full h-[300px] md:h-[400px]">
@@ -33,6 +35,7 @@ const About: React.FC = () => {
           </button>
         </div>
       </div>
+   </Container>
     </section>
   );
 };

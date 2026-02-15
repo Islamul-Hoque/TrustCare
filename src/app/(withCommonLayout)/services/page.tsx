@@ -4,6 +4,7 @@ import Pagination from "./_components/Pagination";
 import SearchBar from "./_components/SearchBar";
 import ServiceList from "./_components/ServiceList";
 import Sidebar from "./_components/Sidebar";
+import Container from "@/components/shared/Container";
 
 interface Service {
   id?: number;
@@ -65,7 +66,7 @@ export default function ServicesPage() {
 
   return (
     <main className="min-h-screen bg-base-200 py-8">
-      <div className="px-4 md:px-8 max-w-7xl mx-auto">
+      <Container>
         <h1 className="text-4xl font-bold mb-2">Our Services</h1>
         <p className="text-gray-600 mb-8">Explore our comprehensive range of care and support services tailored to your needs.</p>
 
@@ -126,7 +127,7 @@ export default function ServicesPage() {
 
         </div>
 
-      </div>
+      </Container>
     </main>
   );
 }

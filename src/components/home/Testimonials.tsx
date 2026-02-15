@@ -2,6 +2,7 @@
 import React from "react";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+import Container from "../shared/Container";
 
 const testimonialsData = [
     {
@@ -41,7 +42,7 @@ const Testimonials: React.FC = () => {
 
     return (
         <section className="py-20 bg-gray-50">
-            <div className="container mx-auto px-6 md:px-12 lg:px-20">
+            <Container>
                 {/* Heading */}
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -88,7 +89,7 @@ const Testimonials: React.FC = () => {
                     </div>
                 </div>
 
-            </div>
+            </Container>
         </section>
     );
 };

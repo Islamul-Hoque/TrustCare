@@ -4,6 +4,7 @@ import Logo from "./Logo";
 import NavLink from "../Buttons/NavLink";
 import { FiShoppingCart } from "react-icons/fi";
 import AuthButtons from "../Buttons/AuthButtons";
+import Container from "./Container";
 
 const Navbar = () => {
     const nav = (
@@ -18,7 +19,8 @@ const Navbar = () => {
 
     return (
         <div className="sticky top-0 z-5000 bg-base-100 shadow">
-            <div className="navbar container mx-auto px-4">
+                <Container>
+            <div className="navbar ">
                 {/* Navbar Start: Logo + Mobile dropdown */}
                 <div className="navbar-start">
                     <div className="dropdown lg:hidden">
@@ -48,13 +50,14 @@ const Navbar = () => {
 
                 {/* Navbar End: Cart + AuthButtons */}
                 <div className="navbar-end flex items-center space-x-4">
-                    <Link href="/cart" className="btn btn-primary">
+                    {/* <Link href="/cart" className="btn btn-primary">
                         <FiShoppingCart className="text-lg" />
-                    </Link>
+                    </Link> */}
                     {/* Client-side for auth buttons */}
                     <AuthButtons />
                 </div>
             </div>
+            </Container>
         </div>
     );
 };

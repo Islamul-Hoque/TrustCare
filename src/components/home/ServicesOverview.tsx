@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Container from "../shared/Container";
 
 const servicesData = [
     {
@@ -27,8 +28,10 @@ const servicesData = [
 
 const ServicesOverview: React.FC = () => {
     return (
+        
         <section className="py-20 bg-white">
-            <div className="container mx-auto px-6 md:px-12 lg:px-20">
+            <Container>
+            <div className=" ">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                         Our Services
@@ -58,15 +61,15 @@ const ServicesOverview: React.FC = () => {
                                     {service.title}
                                 </h3>
                                 <p className="text-gray-600 mb-6">{service.description}</p>
-                                <button className="bg-gradient-to-r from-pink-500 to-red-500 text-white px-6 py-2 rounded-lg font-semibold shadow-md hover:from-red-600 hover:to-pink-600 transition">
-                                    View Details
-                                </button>
+                                
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
+            </Container>
         </section>
+        
     );
 };
 
