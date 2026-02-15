@@ -7,6 +7,7 @@ export async function GET(req: Request) {
     const search = searchParams.get("search") || "";
     const category = searchParams.get("category") || "";
     const region = searchParams.get("region") || "";
+    const id = searchParams.get("id");
     const minPrice = parseInt(searchParams.get("minPrice") || "0");
     const maxPrice = parseInt(searchParams.get("maxPrice") || "999999");
     const priceType = searchParams.get("priceType") || "chargePerDay";
@@ -15,7 +16,23 @@ export async function GET(req: Request) {
     const page = parseInt(searchParams.get("page") || "1");
     const limit = parseInt(searchParams.get("limit") || "6");
 
-    let filtered = [...services];
+    // Add ID to each service
+    const servicesWithId = services.map((service: any, index: number) => ({
+        id: index + 1,
+        ...service
+    }));
+
+    let filtered = [...servicesWithId];
+
+    // If specific ID requested
+    if (id) {
+        const serviceId = parseInt(id);
+        filtered = filtered.filter((s: any) => s.id === serviceId);
+        return NextResponse.json({
+            data: filtered,
+            total: filtered.length,
+        });
+    }
 
     // Search
     if (search) {
@@ -48,17 +65,14 @@ export async function GET(req: Request) {
             const aValue = a[sort];
             const bValue = b[sort];
 
-            // Handle null/undefined values
             if (aValue === undefined || aValue === null) return order === "asc" ? 1 : -1;
             if (bValue === undefined || bValue === null) return order === "asc" ? -1 : 1;
 
-            // String comparison
             if (typeof aValue === "string" && typeof bValue === "string") {
                 const comparison = aValue.localeCompare(bValue);
                 return order === "asc" ? comparison : -comparison;
             }
 
-            // Number comparison
             if (typeof aValue === "number" && typeof bValue === "number") {
                 return order === "asc" ? aValue - bValue : bValue - aValue;
             }

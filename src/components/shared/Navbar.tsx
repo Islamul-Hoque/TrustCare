@@ -10,13 +10,14 @@ const Navbar = () => {
         <>
             <li><NavLink href="/">Home</NavLink></li>
             <li><NavLink href="/services">Services</NavLink></li>
+            <li><NavLink href="/coverage">Coverage Area</NavLink></li>
             <li><NavLink href="/blog">Blog</NavLink></li>
             <li><NavLink href="/contact">Contact</NavLink></li>
         </>
     );
 
     return (
-        <div className="sticky top-0 z-50 bg-base-100 shadow">
+        <div className="sticky top-0 z-5000 bg-base-100 shadow">
             <div className="navbar container mx-auto px-4">
                 {/* Navbar Start: Logo + Mobile dropdown */}
                 <div className="navbar-start">

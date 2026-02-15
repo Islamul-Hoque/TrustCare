@@ -10,7 +10,6 @@
     "availability": "Available 7 days a week, 8 AM - 10 PM",
     "ageRange": "Infants to 12 years old",
     "caregiverQualification": "Certified babysitters with minimum 2 years of experience",
-    "languagesSpoken": ["Bangla", "English"],
     "rating": 4,
     "reviewsCount": 120,
     "faq": [
@@ -40,7 +39,6 @@
     "features": ["Companionship", "Daily assistance", "Reliable caretakers"],
     "availability": "Available 6 days a week, 9 AM - 9 PM",
     "caregiverQualification": "Experienced caretakers with elderly care training",
-    "languagesSpoken": ["Bangla", "English"],
     "rating": 3,
     "reviewsCount": 95,
     "faq": [
@@ -69,7 +67,6 @@
     "features": ["Medical support", "Personalized recovery care", "Flexible booking"],
     "availability": "Available 24/7",
     "caregiverQualification": "Caretakers trained in basic medical support",
-    "languagesSpoken": ["Bangla", "English"],
     "rating": 4,
     "reviewsCount": 150,
     "faq": [

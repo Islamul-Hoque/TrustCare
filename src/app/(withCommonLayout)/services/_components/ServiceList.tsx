@@ -1,4 +1,5 @@
 "use client";
+import { useRouter } from "next/navigation";
 
 interface Service {
   id?: number;
@@ -21,6 +22,8 @@ interface ServiceListProps {
 }
 
 export default function ServiceList({ services, isLoading }: ServiceListProps) {
+  const router = useRouter();
+
   if (isLoading) {
     return (
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -49,11 +52,11 @@ export default function ServiceList({ services, isLoading }: ServiceListProps) {
           {[...Array(5)].map((_, i) => (
             <span key={i}>
               {i < fullStars ? (
-                <span className="text-yellow-400">★</span>
+                <span className="text-yellow-400">*</span>
               ) : i === fullStars && hasHalfStar ? (
-                <span className="text-yellow-400">⯨</span>
+                <span className="text-yellow-400">*</span>
               ) : (
-                <span className="text-gray-300">★</span>
+                <span className="text-gray-300">*</span>
               )}
             </span>
           ))}
@@ -62,6 +65,18 @@ export default function ServiceList({ services, isLoading }: ServiceListProps) {
         <span className="text-sm text-gray-500">({(services.find(s => s.name === (services.find(srv => srv.rating === rating)?.name))?.reviewsCount || 0)})</span>
       </div>
     );
+  };
+
+  const handleViewDetails = (serviceId?: number, serviceName?: string) => {
+    console.log("Service ID:", serviceId);
+    console.log("Service Name:", serviceName);
+    
+    if (serviceId) {
+      console.log("Navigating to /services/" + serviceId);
+      router.push(`/services/${serviceId}`);
+    } else {
+      console.warn("No service ID provided");
+    }
   };
 
   return (
@@ -88,15 +103,20 @@ export default function ServiceList({ services, isLoading }: ServiceListProps) {
 
             <div className="mb-3">
               {service.chargePerHour && (
-                <div className="text-sm text-gray-700">৳{service.chargePerHour}/hr</div>
+                <div className="text-sm text-gray-700">Taka {service.chargePerHour}/hr</div>
               )}
-              <div className="text-2xl font-bold text-primary">৳{service.chargePerDay}/day</div>
+              <div className="text-2xl font-bold text-primary">Taka {service.chargePerDay}/day</div>
             </div>
 
             {renderRating(service.rating)}
 
             <div className="card-actions">
-              <button className="btn btn-primary w-full">Book Now</button>
+              <button 
+                onClick={() => handleViewDetails(service.id, service.name)}
+                className="btn btn-primary w-full"
+              >
+                View Details
+              </button>
             </div>
           </div>
         </div>
